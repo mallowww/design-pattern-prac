@@ -6,12 +6,12 @@ type NormalBuilder struct {
 	floor      int
 }
 
-// main meth
+// main meth - instance struct
 func newNormalBuilder() *NormalBuilder {
 	return &NormalBuilder{}
 }
 
-// sub meth
+// sub meth - config fields for client requirement
 func (b *NormalBuilder) setWindowType() {
 	b.windowType = "Window Glass"
 }
@@ -24,11 +24,11 @@ func (b *NormalBuilder) setNumFloor() {
 	b.floor = 2
 }
 
-// from sub to main
+// from sub to main - return object House
 func (b *NormalBuilder) getHouse() House {
 	return House{
-		doorType: b.doorType,
+		doorType:   b.doorType,
 		windowType: b.windowType,
-		floor: b.floor,
+		floor:      b.floor,
 	}
 }

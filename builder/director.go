@@ -15,8 +15,8 @@ func (d *Director) setBuilder(b IBuilder) {
 }
 
 func (d *Director) buiildHouse() House {
-	d.builder.setWindowType()
 	d.builder.setDoorType()
+	d.builder.setWindowType()
 	d.builder.setNumFloor()
 	return d.builder.getHouse()
 }
